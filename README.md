@@ -1,100 +1,130 @@
-# wwm_trans_wiki
-# ✅ Tính năng Find & Replace - Hoàn thành
+# 🎮 WWM Translation Wiki
 
-## 🎯 Yêu cầu
-- Chọn **cột nguồn** để tìm kiếm
-- Chọn **cột đích** để lưu kết quả sau khi thay thế
-- Có tùy chọn **phân biệt chữ hoa thường**
-- Áp dụng cho các dòng đang được **filter**
+> Hướng dẫn sử dụng Web App dịch game **Where Winds Meet** (Yến Vân Đài)
 
-## ✅ Đã hoàn thành
+---
 
-### Tính năng chính:
-1. ✅ **Chọn cột nguồn**: CN, EN, VI-EN, VI-CN, VI Auto Edit, AI Translation, Manual Translation, Note
-2. ✅ **Chọn cột đích**: Tất cả 8 cột (mặc định: VI Auto Edit)
-3. ✅ **Linh hoạt**: Có thể chọn cùng cột nguồn và cột đích để thay thế trực tiếp
-4. ✅ **Bảo toàn dữ liệu**: Nếu cột nguồn ≠ cột đích, dữ liệu gốc không thay đổi
-5. ✅ **Checkbox "Tìm chính xác"**: Có thể bật/tắt phân biệt chữ hoa thường
-6. ✅ **Áp dụng cho dòng đã chọn**: Chỉ xử lý các bản ghi được chọn sau khi filter
-7. ✅ **Tự động lưu editor**: Cập nhật `editor_id` với người thực hiện
-8. ✅ **Thông báo kết quả**: Hiển thị số lượng bản ghi đã cập nhật vào cột nào
+## 📖 Giới thiệu
 
-### Cách sử dụng:
-1. **Filter** dữ liệu (nếu cần)
-2. **Chọn** các dòng cần xử lý
-3. Click **Bulk Actions** → **Find & Replace**
-4. Điền thông tin:
-   - **Cột nguồn (tìm kiếm)**: Chọn cột để tìm
-   - **Tìm**: Nhập chuỗi cần tìm
-   - **Thay thế bằng**: Nhập chuỗi thay thế
-   - **☑️ Tìm chính xác**: Tích nếu muốn phân biệt chữ hoa/thường
-   - **Cột đích (lưu kết quả)**: Chọn cột để lưu (mặc định: VI Auto Edit)
-5. Click **Thực hiện**
+Web App WWM Translation là công cụ hỗ trợ dịch thuật game **Where Winds Meet** (逆水寒 - Yến Vân Đài). Hệ thống cho phép:
 
-### Ví dụ 1: Bảo toàn dữ liệu gốc
-```
-Cột nguồn: Manual Translation
-Tìm: "game"
-Thay thế: "trò chơi"
-Cột đích: VI Auto Edit
-Tìm chính xác: ☐
+- 📝 Quản lý và chỉnh sửa bản dịch tiếng Việt
+- 🔍 Tìm kiếm và thay thế hàng loạt
+- 📥 Import file ngôn ngữ gốc từ game
+- 📤 Export file đã dịch để sử dụng
 
-Kết quả:
-- Manual Translation: "Game offline" (GIỮ NGUYÊN)
-- VI Auto Edit: "trò chơi offline" (MỚI)
-```
+---
 
-### Ví dụ 2: Thay thế trực tiếp (ghi đè)
-```
-Cột nguồn: Manual Translation
-Tìm: "game"
-Thay thế: "trò chơi"
-Cột đích: Manual Translation (cùng cột)
-Tìm chính xác: ☐
+## 📚 Mục lục hướng dẫn
 
-Kết quả:
-- Manual Translation: "Game offline" → "trò chơi offline" (GHI ĐÈ)
-```
+### 🔄 Import & Export
 
-### Ví dụ 3: Copy và chỉnh sửa từ EN sang Manual Translation
-```
-Cột nguồn: EN
-Tìm: "System"
-Thay thế: "Hệ thống"
-Cột đích: Manual Translation
-Tìm chính xác: ✅
+| Tài liệu | Mô tả |
+|----------|-------|
+| [📥 Hướng dẫn Import](<HUONG_DAN_IMPORT.md>) | Cách nhập file ngôn ngữ `translate_words_map` vào hệ thống |
+| [📤 Hướng dẫn Export](<HUONG_DAN_EXPORT.md>) | Cách xuất file ngôn ngữ đã dịch để sử dụng trong game |
 
-Kết quả:
-- EN: "System Settings" (GIỮ NGUYÊN)
-- Manual Translation: "Hệ thống Settings" (MỚI)
-```
+### 🔍 Find & Replace
 
-## 📁 File đã chỉnh sửa
-- `app/Filament/Resources/WWMTranslationResource.php`
+| Tài liệu | Mô tả |
+|----------|-------|
+| [🎯 Quick Guide](<FIND_REPLACE_QUICK_GUIDE.md>) | Hướng dẫn nhanh sử dụng Find & Replace |
+| [📖 Hướng dẫn chi tiết](<HUONG_DAN_FIND_REPLACE.md>) | Hướng dẫn đầy đủ với các ví dụ thực tế |
 
-## 📄 Tài liệu
-- Xem file `HUONG_DAN_FIND_REPLACE.md` để biết chi tiết và ví dụ đầy đủ
+---
+
+## 🚀 Bắt đầu nhanh
+
+### 1️⃣ Đăng nhập
+- Truy cập web app và đăng nhập bằng tài khoản được cấp
+- Vai trò: **Admin**, **SMod**, hoặc **Translator**
+
+### 2️⃣ Dịch thuật cơ bản
+1. Vào menu **Where Winds Meet** → **WWM Trans**
+2. Sử dụng **Filter** để lọc các dòng cần dịch
+3. Chọn dòng và chỉnh sửa trực tiếp hoặc sử dụng **Bulk Actions**
+
+### 3️⃣ Các cột dữ liệu chính
+
+| Cột | Ký hiệu | Mô tả |
+|-----|---------|-------|
+| CN | `zh_cn` | Văn bản gốc tiếng Trung |
+| EN | `en` | Văn bản gốc tiếng Anh |
+| VI-EN | `vi_en` | Bản dịch Việt từ tiếng Anh |
+| VI-CN | `vi_cn` | Bản dịch Việt từ tiếng Trung |
+| VI Auto Edit | `vi_auto_edit` | Bản dịch tự động đã chỉnh sửa |
+| AI Translation | `ai_translation` | Bản dịch từ AI |
+| Manual Translation | `manual_translation` | Bản dịch thủ công (ưu tiên cao nhất) |
+| Note | `note` | Ghi chú |
+
+---
+
+## ⭐ Tính năng chính
+
+### 🔍 Find & Replace
+Tìm kiếm và thay thế hàng loạt với các tùy chọn:
+- ✅ Chọn cột nguồn để tìm kiếm
+- ✅ Chọn cột đích để lưu kết quả
+- ✅ Tùy chọn phân biệt chữ hoa/thường
+- ✅ Áp dụng cho các dòng đã chọn sau khi filter
+
+👉 [Xem hướng dẫn chi tiết](<HUONG_DAN_FIND_REPLACE.md>)
+
+### 📥 Import
+Nhập file ngôn ngữ từ game vào hệ thống:
+- Hỗ trợ file `translate_words_map`
+- Tự động phát hiện và cập nhật dữ liệu mới
+
+👉 [Xem hướng dẫn Import](<HUONG_DAN_IMPORT.md>)
+
+### 📤 Export
+Xuất file ngôn ngữ đã dịch:
+- Xuất file đầy đủ hoặc chỉ phần thay đổi (diff)
+- Tự động đóng gói sẵn sàng sử dụng
+
+👉 [Xem hướng dẫn Export](<HUONG_DAN_EXPORT.md>)
+
+---
+
+## 🔐 Phân quyền
+
+| Vai trò | Quyền hạn |
+|---------|-----------|
+| **Admin** | Toàn quyền: Import, Export, xóa lock, quản lý user |
+| **SMod** | Import, Export, Find & Replace, chỉnh sửa dịch |
+| **Translator** | Chỉnh sửa bản dịch, Find & Replace |
+
+---
+
+## 📌 Thứ tự ưu tiên khi Export
+
+Khi xuất file, hệ thống sẽ lấy bản dịch theo thứ tự ưu tiên:
+
+1. 🥇 `manual_translation` - Bản dịch thủ công
+2. 🥈 `vi_auto_edit` - Bản dịch tự động đã chỉnh sửa
+3. 🥉 `vi_cn` - Bản dịch Việt từ tiếng Trung
+4. 4️⃣ `vi_en` - Bản dịch Việt từ tiếng Anh
+5. 5️⃣ `ai_translation` - Bản dịch AI
+
+> 💡 Nếu tất cả đều trống, giữ nguyên giá trị gốc.
+
+---
 
 ## ⚠️ Lưu ý quan trọng
 
-### 🔴 Cột nguồn vs Cột đích
-
-**Trường hợp 1: Cột nguồn ≠ Cột đích (Khuyến nghị)**
-- ✅ Dữ liệu gốc KHÔNG thay đổi
-- ✅ Kết quả lưu vào cột đích
-- ✅ An toàn, có thể khôi phục
-
-**Trường hợp 2: Cột nguồn = Cột đích (Thay thế trực tiếp)**
-- ⚠️ Dữ liệu gốc sẽ bị GHI ĐÈ
-- ⚠️ KHÔNG thể hoàn tác
-- ⚠️ Hãy cẩn thận khi dùng!
-
-### 📌 Lưu ý khác
-1. Kết quả **CHỈ** lưu vào **cột đích** mà bạn chọn
-2. Nếu cột đích đã có dữ liệu, sẽ bị **GHI ĐÈ**
-3. **KHÔNG** thể hoàn tác sau khi thực hiện
-4. Chỉ áp dụng cho các dòng **ĐÃ CHỌN**, không tự động áp dụng cho tất cả kết quả filter
+- ⏱️ **Chỉ 1 job Import/Export** có thể chạy đồng thời trên toàn hệ thống
+- 🔄 **Không đóng trình duyệt** khi đang có job chạy
+- 💾 **Lưu thường xuyên** khi chỉnh sửa dịch
+- ⚡ **Sử dụng Filter** để làm việc hiệu quả hơn
 
 ---
-**Status: ✅ COMPLETED**
-**Version: 2.0 - Với tính năng chọn cột đích**
+
+## 🆘 Hỗ trợ
+
+Nếu gặp vấn đề hoặc cần hỗ trợ, vui lòng liên hệ:
+- 📧 Admin hoặc SMod của hệ thống
+- 💬 Group chat dự án
+
+---
+
+**© WWM Translation Team**
