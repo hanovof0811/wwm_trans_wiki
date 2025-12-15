@@ -21,15 +21,15 @@ Web App WWM Translation là công cụ hỗ trợ dịch thuật game **Where Wi
 
 | Tài liệu | Mô tả |
 |----------|-------|
-| [📥 Hướng dẫn Import](<HUONG_DAN_IMPORT.md>) | Cách nhập file ngôn ngữ `translate_words_map` vào hệ thống |
-| [📤 Hướng dẫn Export](<HUONG_DAN_EXPORT.md>) | Cách xuất file ngôn ngữ đã dịch để sử dụng trong game |
+| [📥 Hướng dẫn Import](<Import&Export/HUONG_DAN_IMPORT.md>) | Cách nhập file ngôn ngữ `translate_words_map` vào hệ thống |
+| [📤 Hướng dẫn Export](<Import&Export/HUONG_DAN_EXPORT.md>) | Cách xuất file ngôn ngữ đã dịch để sử dụng trong game |
 
 ### 🔍 Find & Replace
 
 | Tài liệu | Mô tả |
 |----------|-------|
-| [🎯 Quick Guide](<FIND_REPLACE_QUICK_GUIDE.md>) | Hướng dẫn nhanh sử dụng Find & Replace |
-| [📖 Hướng dẫn chi tiết](<HUONG_DAN_FIND_REPLACE.md>) | Hướng dẫn đầy đủ với các ví dụ thực tế |
+| [🎯 Quick Guide](<Find&Replace/FIND_REPLACE_QUICK_GUIDE.md>) | Hướng dẫn nhanh sử dụng Find & Replace |
+| [📖 Hướng dẫn chi tiết](<Find&Replace/HUONG_DAN_FIND_REPLACE.md>) | Hướng dẫn đầy đủ với các ví dụ thực tế |
 
 ---
 
