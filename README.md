@@ -1,12 +1,12 @@
 # 🎮 WWM Translation Wiki
 
-> Hướng dẫn sử dụng Web App dịch game **Where Winds Meet** (Yến Vân Đài)
+> Hướng dẫn sử dụng Web App dịch game **Where Winds Meet** (Yến Vân Thập Lục Thanh)
 
 ---
 
 ## 📖 Giới thiệu
 
-Web App WWM Translation là công cụ hỗ trợ dịch thuật game **Where Winds Meet** (逆水寒 - Yến Vân Đài). Hệ thống cho phép:
+Web App WWM Translation là công cụ hỗ trợ dịch thuật game **Where Winds Meet** (燕云十六声 - Yến Vân Thập Lục Thanh). Hệ thống cho phép:
 
 - 📝 Quản lý và chỉnh sửa bản dịch tiếng Việt
 - 🔍 Tìm kiếm và thay thế hàng loạt
